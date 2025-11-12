@@ -7,11 +7,6 @@
   <meta name="description" content="Svenja Seuffert — Research Assistant & PhD Student, Philipps-Universität Marburg. Automatic speech analysis in psychiatric populations." />
   <meta name="theme-color" content="#0f172a" />
 
-  <!-- Open Graph for nicer shares -->
-  <meta property="og:title" content="Svenja Seuffert — Research Profile" />
-  <meta property="og:description" content="Automatic speech analysis in psychiatric populations; linguistic markers and neurobiological correlates." />
-  <meta property="og:type" content="profile" />
-
   <style>
     :root{
       --bg:#ffffff;
@@ -32,7 +27,7 @@
     body{
       margin:0; padding:3.5rem 1.25rem 4rem;
       background:var(--bg); color:var(--fg);
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
     .wrap{max-width:var(--maxw); margin:0 auto}
@@ -47,68 +42,38 @@
       display:inline-block; margin-right:.9rem; padding:.25rem .5rem;
       text-decoration:none; color:var(--link); border-radius:.4rem;
     }
-    nav a:focus, nav a:hover{background:rgba(90,110,140,.1)}
+    nav a:hover{background:rgba(90,110,140,.1)}
     h2{
-      font-size:1.15rem; margin:2rem 0 .6rem; color:var(--accent); letter-spacing:.2px;
+      font-size:1.15rem; margin:2rem 0 .6rem; color:var(--accent);
+      letter-spacing:.2px; font-weight:600;
     }
-    p{margin:.75rem 0; color:var(--fg); hyphens:auto}
+    p{margin:.75rem 0; hyphens:auto}
     .meta{color:var(--muted)}
     .card{
       background:var(--card); border:1px solid rgba(90,110,140,.18);
       border-radius:12px; padding:1rem 1.1rem; margin:1rem 0;
     }
-    .btn{
-      display:inline-block; font-weight:600; text-decoration:none; color:#fff; background:var(--link);
-      padding:.5rem .75rem; border-radius:.55rem;
-    }
-    .btn:focus, .btn:hover{filter:brightness(1.05)}
-    a{color:var(--link)}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
     ul.clean{list-style:none; padding:0; margin:0}
-    li.pub{margin:1rem 0; padding:0 0 .6rem}
-    li.pub:not(:last-child){border-bottom:1px dashed rgba(90,110,140,.25)}
-    .pub .title{font-weight:600}
-    .me{font-weight:700; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:2px}
-    .venue{color:var(--muted)}
-    .doi{white-space:nowrap}
-    details{margin:.25rem 0 .5rem}
-    code{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:.9em}
+    li.pub{margin:1rem 0; padding:0 0 .8rem; border-bottom:1px dashed rgba(90,110,140,.25)}
+    li.pub:last-child{border-bottom:none}
+    .me{font-weight:600}
     footer{margin-top:2.5rem; color:var(--muted); font-size:.95rem}
-
-    /* Print-friendly */
-    @media print{
-      body{background:#fff; color:#000; padding:0}
-      nav, .btn, details{display:none !important}
-      a{color:#000; text-decoration:underline}
-      .card{border:none; background:#fff; padding:0}
-    }
   </style>
-
-  <!-- Minimal structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Svenja Seuffert",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Philipps-Universität Marburg, Department of Psychiatry and Psychotherapy"
-    },
-    "email": "mailto:svenja.seuffert@uni-marburg.de",
-    "url": "https://svenjaseuffert.github.io/"
-  }
-  </script>
 </head>
+
 <body>
   <div class="wrap">
     <header>
       <div class="name">Svenja Seuffert</div>
       <div class="role">Research Assistant &amp; PhD Student · Philipps-Universität Marburg, Faculty of Medicine · Department of Psychiatry and Psychotherapy</div>
-      <nav aria-label="Section navigation">
+      <nav>
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
-        <a class="btn" href="CV_Seuffert.pdf">Curriculum Vitae (PDF)</a>
+        <a href="CV_Seuffert.pdf">Curriculum Vitae (PDF)</a>
       </nav>
     </header>
 
@@ -123,57 +88,22 @@
       <section id="research">
         <h2>Research Interests</h2>
         <div class="card">
-          <p class="meta">Computational psychiatry · Natural language processing of spontaneous speech · Formal thought disorder · Multimodal integration of linguistic and neuroimaging markers · Methodologically rigorous, reproducible science</p>
+          <p class="meta">
+            Computational psychiatry · Natural language processing of spontaneous speech · Formal thought disorder · Multimodal integration of linguistic and neuroimaging markers · Reproducible and transparent research
+          </p>
         </div>
       </section>
 
-      <section id="publications" aria-label="Selected publications">
+      <section id="publications">
         <h2>Publications</h2>
         <ul class="clean">
-
           <li class="pub">
-            <div class="title">Figurative language production in schizophrenia, bipolar disorder, and depression.</div>
-            <div>
-              Mueller, N., Mülfarth, R. R., <span class="me">Seuffert, S.</span>, Dannlowski, U., Kircher, T., Kauschke, C., Nagels, A., &amp; Stein, F. (2025).
-              <span class="venue">Psychiatry Research, 354, 116772.</span>
-              <span class="doi"> <a href="https://doi.org/10.1016/j.psychres.2025.116772" target="_blank" rel="noopener">https://doi.org/10.1016/j.psychres.2025.116772</a></span>
-            </div>
-            <details>
-              <summary>BibTeX</summary>
-              <pre><code>@article{Mueller2025Figurative,
-  author  = {Mueller, N. and M{\"u}lfarth, R. R. and Seuffert, S. and Dannlowski, U. and Kircher, T. and Kauschke, C. and Nagels, A. and Stein, F.},
-  title   = {Figurative language production in schizophrenia, bipolar disorder, and depression},
-  journal = {Psychiatry Research},
-  year    = {2025},
-  volume  = {354},
-  pages   = {116772},
-  doi     = {10.1016/j.psychres.2025.116772}
-}</code></pre>
-            </details>
+            Mueller, N., Mülfarth, R. R., <span class="me">Seuffert, S.</span>, Dannlowski, U., Kircher, T., Kauschke, C., Nagels, A., &amp; Stein, F. (2025). Figurative language production in schizophrenia, bipolar disorder, and depression. <em>Psychiatry Research, 354</em>, 116772. <a href="https://doi.org/10.1016/j.psychres.2025.116772" target="_blank" rel="noopener">https://doi.org/10.1016/j.psychres.2025.116772</a>
           </li>
 
           <li class="pub">
-            <div class="title">Approximating the semantic space: Word embedding techniques in psychiatric speech analysis.</div>
-            <div>
-              Palominos, C., He, R., Fr{\"o}hlich, K., M{\"u}lfarth, R. R., <span class="me">Seuffert, S.</span>, Sommer, I. E., Homan, P., Kircher, T., Stein, F., &amp; Hinzen, W. (2024).
-              <span class="venue">Schizophrenia, 10(1), 114.</span>
-              <span class="doi"> <a href="https://doi.org/10.1038/s41537-024-00524-7" target="_blank" rel="noopener">https://doi.org/10.1038/s41537-024-00524-7</a></span>
-            </div>
-            <details>
-              <summary>BibTeX</summary>
-              <pre><code>@article{Palominos2024SemanticSpace,
-  author  = {Palominos, C. and He, R. and Fr{\"o}hlich, K. and M{\"u}lfarth, R. R. and Seuffert, S. and Sommer, I. E. and Homan, P. and Kircher, T. and Stein, F. and Hinzen, W.},
-  title   = {Approximating the semantic space: Word embedding techniques in psychiatric speech analysis},
-  journal = {Schizophrenia},
-  year    = {2024},
-  volume  = {10},
-  number  = {1},
-  pages   = {114},
-  doi     = {10.1038/s41537-024-00524-7}
-}</code></pre>
-            </details>
+            Palominos, C., He, R., Fröhlich, K., Mülfarth, R. R., <span class="me">Seuffert, S.</span>, Sommer, I. E., Homan, P., Kircher, T., Stein, F., &amp; Hinzen, W. (2024). Approximating the semantic space: Word embedding techniques in psychiatric speech analysis. <em>Schizophrenia, 10</em>(1), 114. <a href="https://doi.org/10.1038/s41537-024-00524-7" target="_blank" rel="noopener">https://doi.org/10.1038/s41537-024-00524-7</a>
           </li>
-
         </ul>
       </section>
 
@@ -183,8 +113,7 @@
           <strong>Email:</strong> <a href="mailto:svenja.seuffert@uni-marburg.de">svenja.seuffert@uni-marburg.de</a><br />
           <strong>Address:</strong> Rudolf-Bultmann-Str. 8, 35039 Marburg, Germany
         </p>
-
-        <div class="card" role="complementary" aria-label="Profiles">
+        <div class="card">
           <p>
             <a href="https://github.com/svenjaseuffert">GitHub</a> ·
             <a href="https://www.linkedin.com/in/svenja-seuffert-45782a373/">LinkedIn</a>
