@@ -1,179 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Svenja Seuffert — Research Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Svenja Seuffert — Research Assistant & PhD Student, Philipps-Universität Marburg. Automatic speech analysis in psychiatric populations." />
-  <meta name="theme-color" content="#0f172a" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Svenja Seuffert — PhD student at Philipps-Universität Marburg. Research in computational psychiatry, speech analysis, and clinical neuroscience.">
+  <meta name="theme-color" content="#f9fafb">
+  <title>Svenja Seuffert | Research</title>
   <style>
-    :root{
-      --bg:#ffffff;
-      --fg:#0b1324;
-      --muted:#5b6478;
-      --link:#0b57d0;
-      --accent:#0f172a;
-      --card:#f6f8fc;
-      --maxw:820px;
-    }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0b1220; --fg:#e6e9f2; --muted:#a6adbf;
-        --link:#7bb0ff; --accent:#cbd5e1; --card:#131b2e;
-      }
-    }
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; padding:3.5rem 1.25rem 4rem;
-      background:var(--bg); color:var(--fg);
-      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    }
-    .wrap{max-width:var(--maxw); margin:0 auto}
-    header{
-      display:flex; flex-direction:column; gap:.25rem; margin-bottom:2rem;
-      border-bottom:1px solid rgba(90,110,140,.2); padding-bottom:1.25rem;
-    }
-    .name{font-size:2.1rem; font-weight:700; letter-spacing:.2px}
-    .role{color:var(--muted)}
-    nav{margin-top:.5rem}
-    nav a{
-      display:inline-block; margin-right:.9rem; padding:.25rem .5rem;
-      text-decoration:none; color:var(--link); border-radius:.4rem;
-    }
-    nav a:hover{background:rgba(90,110,140,.1)}
-    h2{
-      font-size:1.15rem; margin:2rem 0 .6rem; color:var(--accent);
-      letter-spacing:.2px; font-weight:600;
-    }
-    p{margin:.75rem 0; hyphens:auto}
-    .meta{color:var(--muted)}
-    .card{
-      background:var(--card); border:1px solid rgba(90,110,140,.18);
-      border-radius:12px; padding:1rem 1.1rem; margin:1rem 0;
-    }
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    ul.clean{list-style:none; padding:0; margin:0}
-    li.pub{margin:1rem 0; padding:0 0 .8rem; border-bottom:1px dashed rgba(90,110,140,.25)}
-    li.pub:last-child{border-bottom:none}
-    .me{font-weight:600}
-    footer{margin-top:2.5rem; color:var(--muted); font-size:.95rem}
+    :root { color-scheme:light dark; --bg:#ffffff; --text:#1b2735; --muted:#536273; --line:#dfe5eb; --accent:#245f81; --surface:#f5f8fa; --max:880px; }
+    @media(prefers-color-scheme:dark) { :root { --bg:#101820; --text:#ecf1f4; --muted:#b1c0cc; --line:#354554; --accent:#8ec8e9; --surface:#182531; } }
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    .container {max-width:var(--max);margin:auto;padding:0 28px}
+    a {color:var(--accent);text-underline-offset:3px}
+    a:hover {text-decoration-thickness:2px}
+    a:focus-visible {outline:3px solid var(--accent);outline-offset:4px;border-radius:2px}
+    .top {padding:68px 0 35px;border-bottom:1px solid var(--line)}
+    .eyebrow {font-size:.82rem;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 9px}
+    h1 {font-size:clamp(2.4rem,6vw,3.5rem);letter-spacing:-.045em;line-height:1.15;margin:0 0 14px;font-weight:720}
+    .subtitle {color:var(--muted);font-size:1.07rem;max-width:710px;margin:0}
+    nav {display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:30px;font-size:.94rem}
+    nav a {text-decoration:none;color:var(--text);font-weight:550}
+    nav a:hover {color:var(--accent)}
+    main {padding:18px 0 60px}
+    section {padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+    h2 {font-size:1.42rem;letter-spacing:-.025em;margin:0 0 16px}
+    p {margin:0 0 14px}
+    .lead {font-size:1.08rem;line-height:1.8;max-width:760px}
+    .research-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:20px}
+    .research-item {padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+    .research-item strong {display:block;margin-bottom:5px}
+    .research-item span {font-size:.94rem;color:var(--muted)}
+    .publications {list-style:none;padding:0;margin:0}
+    .publication {display:block;padding:18px 0;border-bottom:1px solid var(--line)}
+    .year-heading {font-size:1.18rem;font-weight:700;margin:29px 0 4px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:7px}
+    .publication:last-child {border-bottom:0}
+    .pub-year {font-size:.9rem;font-weight:650;color:var(--muted);padding-top:2px}
+    .pub-title {font-weight:650;font-size:1.035rem;line-height:1.5;text-decoration:none}
+    .pub-title:hover {text-decoration:underline}
+    .pub-authors {font-size:.91rem;color:var(--muted);margin:7px 0 3px}
+    .me {color:var(--text);font-weight:750}
+    .pub-journal {font-size:.91rem;color:var(--muted);margin:0}
+    .pub-journal a {margin-left:8px;white-space:nowrap}
+    .details {display:grid;grid-template-columns:160px 1fr;gap:10px 22px;margin:0}
+    .details dt {font-weight:650}
+    .details dd {margin:0;color:var(--muted)}
+    .links {display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:15px}
+    footer {padding:28px 0 45px;color:var(--muted);font-size:.86rem}
+    @media(max-width:580px) {.top{padding-top:42px}.container{padding:0 19px}.research-list{grid-template-columns:1fr}.publication{grid-template-columns:1fr;gap:3px}.details{grid-template-columns:1fr;gap:2px}.details dd{margin-bottom:13px}}
+    @media(prefers-reduced-motion:reduce) {html{scroll-behavior:auto}}
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="name">Svenja Seuffert</div>
-      <div class="role">Research Assistant &amp; PhD Student · Philipps-Universität Marburg, School of Medicine · Department of Psychiatry and Psychotherapy</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-        <a href="CV_Seuffert.pdf">Curriculum Vitae (PDF)</a>
+  <header class="top">
+    <div class="container">
+      <p class="eyebrow">Research profile</p>
+      <h1>Svenja Seuffert</h1>
+      <p class="subtitle">PhD Student<br>Department of Psychiatry and Psychotherapy · Philipps-Universität Marburg, Germany</p>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#background">Background</a><a href="#technical">Technical expertise</a><a href="#contact">Contact</a>
       </nav>
-    </header>
-
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          I am a PhD student in psychiatry at Philipps-Universität Marburg. My research focuses on automatic speech analysis in psychiatric populations, with an emphasis on latent linguistic markers in affective and psychotic disorders and their neurobiological correlates.
-        </p>
-      </section>
-
-      <section id="research">
-        <h2>Research Interests</h2>
-        <div class="card">
-          <p class="meta">
-            Computational psychiatry · Natural language processing (NLP) · Automatic speech analysis · Transdiagnosticodal · Brain imaging · Formal thought disorder
-          </p>
-        </div>
-      </section>
-
-<section id="publications">
-  <h2>Publications</h2>
-  <ul class="clean">
-
-    <!-- Existing publication -->
-    <li class="pub">
-      Stein, F., Lepper, J., Mülfarth, R. R., Schepers, D., <span class="me">Seuffert, S.</span>, Teutenberg, L., Thomas-Odenthal, F., Usemann, P., Borgers, T., Flinkenflügel, K., Goltermann, J., Grotegerd, D., Hubbert, J., Jurischka, C., Krieger, J., Meinert, S., Alexander, N., Hahn, T., Jamalabadi, H., Jansen, A., Nenadić, I., Straube, B., Dannlowski, U., &amp; Kircher, T. (2026).
-      Formal thought disorder in unipolar depression: Prevalence and functional brain correlates from a multimodal MRI study.
-      <em>Journal of Affective Disorders, 407</em>, 121779.
-      <a href="https://doi.org/10.1016/j.jad.2026.121779" target="_blank" rel="noopener">https://doi.org/10.1016/j.jad.2026.121779
-      </a>
-    </li>
-
-    <!-- Existing publication -->
-    <li class="pub">
-      Mülfarth, R. R., <span class="me">Seuffert, S.</span>, Alexander, N., Jamalabadi, H., Nenadić, I., Straube, B., Teutenberg, L., Thomas-Odenthal, F., Usemann, P., Dannlowski, U., Kircher, T., &amp; Stein, F. (2026).
-      Linking spontaneous speech, cognition, and psychopathology across affective and psychotic disorders: A network approach.
-      <em>European Psychiatry, 69</em>(1), e21.
-      <a href="https://doi.org/10.1192/j.eurpsy.2026.10151" target="_blank" rel="noopener">https://doi.org/10.1192/j.eurpsy.2026.10151
-      </a>
-      </a>
-    </li>
-
-    <!-- MP Publication -->
-    <li class="pub">
-      <span class="me">Seuffert, S.</span>, Mülfarth, R. R., Teutenberg, L., Thomas-Odenthal, F., Usemann, P., Alexander, N., Jamalabadi, H., Nenadić, I., Straube, B., Hahn, T., Dannlowski, U., Kircher, T., & Stein, F. (2025).
-      Linking speech patterns to brain structure in affective and psychotic disorders: An integrative natural language processing approach.
-      <em>Molecular Psychiatry.</em> Advance online publication.
-      <a href="https://doi.org/10.1038/s41380-025-03347-9" target="_blank" rel="noopener">
-        https://doi.org/10.1038/s41380-025-03347-9
-      </a>
-    </li>
-
-    <!-- Existing publication -->
-    <li class="pub">
-      Mueller, N., Mülfarth, R. R., <span class="me">Seuffert, S.</span>, Dannlowski, U., Kircher, T., Kauschke, C., Nagels, A., & Stein, F. (2025).
-      Figurative language production in schizophrenia, bipolar disorder, and depression.
-      <em>Psychiatry Research, 354</em>(1), 116772.
-      <a href="https://doi.org/10.1016/j.psychres.2025.116772" target="_blank" rel="noopener">
-        https://doi.org/10.1016/j.psychres.2025.116772
-      </a>
-    </li>
-
-    <!-- Existing publication -->
-    <li class="pub">
-      Palominos, C., He, R., Fröhlich, K., Mülfarth, R. R., <span class="me">Seuffert, S.</span>, Sommer, I. E., Homan, P., Kircher, T., Stein, F., & Hinzen, W. (2024).
-      Approximating the semantic space: Word embedding techniques in psychiatric speech analysis.
-      <em>Schizophrenia, 10</em>(1), 114.
-      <a href="https://doi.org/10.1038/s41537-024-00524-7" target="_blank" rel="noopener">
-        https://doi.org/10.1038/s41537-024-00524-7
-      </a>
-    </li>
-
-  </ul>
-</section>
-
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          <strong>Email:</strong> <a href="mailto:svenja.seuffert@uni-marburg.de">svenja.seuffert@uni-marburg.de</a><br />
-          <strong>Address:</strong> Rudolf-Bultmann-Str. 8, 35039 Marburg, Germany
-        </p>
-        <div class="card">
-          <p>
-            <a href="https://github.com/svenjaseuffert">GitHub</a> ·
-            <a href="https://www.linkedin.com/in/svenja-seuffert-45782a373/">LinkedIn</a> ·
-            <a href="https://neurosta.github.io/NeuroSTA/">Research Group</a>
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <span>Last updated: <script>document.write(new Date().toISOString().slice(0,10))</script></span>
-    </footer>
-  </div>
+    </div>
+  </header>
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p class="lead">I am a PhD student at the Department of Psychiatry and Psychotherapy at Philipps-Universität Marburg. My research focuses on how speech and language relate to psychopathology, cognitive functioning, and brain structure in affective and psychotic disorders.</p>
+      <p>I use computational approaches to examine patterns in spontaneous speech and explore how they relate to clinical symptoms and neuroimaging measures. My work combines natural language processing, acoustic speech analysis, statistical methods, and machine learning, with a particular interest in dimensions of psychopathology that extend beyond diagnostic categories.</p>
+    </section>
+    <section id="research">
+      <h2>Research interests</h2>
+      <div class="research-list">
+        <div class="research-item"><strong>Speech &amp; language</strong><span>Natural language processing, acoustic speech analysis, linguistic features, and formal thought disorder.</span></div>
+        <div class="research-item"><strong>Computational psychiatry</strong><span>Transdiagnostic psychopathology, cognition, and quantitative approaches to psychiatric research.</span></div>
+        <div class="research-item"><strong>Neuroimaging</strong><span>Structural and diffusion MRI, and relationships between brain structure and language.</span></div>
+        <div class="research-item"><strong>Methods</strong><span>Statistical modeling, machine learning, and multimodal data analysis.</span></div>
+      </div>
+    </section>
+    <section id="publications">
+      <h2>Publications</h2>
+      <h3 class="year-heading">2026</h3>
+      <ol class="publications">
+<li class="publication">
+  <div class="pub-body"><a class="pub-title" href="https://doi.org/10.1038/s41537-026-00802-6" target="_blank" rel="noopener noreferrer">Co-reference and the topology of meaning in schizophrenia and depression</a>
+  <p class="pub-authors">Palominos, C., Fröhlich, K., Mülfarth, R. R., <strong class="me">Seuffert, S.</strong>, Brochhagen, T., Stein, F., Kircher, T., Sommer, I. E., Homan, P., &amp; Hinzen, W..</p>
+  <p class="pub-journal"><em>Schizophrenia. Advance online publication</em> <a href="https://doi.org/10.1038/s41537-026-00802-6" target="_blank" rel="noopener noreferrer" aria-label="DOI for Co-reference and the topology of meaning in schizophrenia and depression">https://doi.org/10.1038/s41537-026-00802-6</a></p></div>
+</li>
+<li class="publication">
+  <div class="pub-body"><a class="pub-title" href="https://doi.org/10.1007/s00406-026-02389-6" target="_blank" rel="noopener noreferrer">The role of social support in transdiagnostic symptom networks in affective and psychotic disorders: A cross-sectional and longitudinal network analysis</a>
+  <p class="pub-authors">Tan, R., Stein, F., Teutenberg, L., Thomas-Odenthal, F., Usemann, P., Javaheripour, N., Mülfarth, R. R., <strong class="me">Seuffert, S.</strong>, Shen, Y., Qian, Z., Hahn, T., Meinert, S., Flinkenflügel, K., Borgers, T., Grotegerd, D., Leehr, E. J., Jamalabadi, H., Nenadić, I., Straube, B., … Kircher, T..</p>
+  <p class="pub-journal"><em>European Archives of Psychiatry and Clinical Neuroscience. Advance online publication</em> <a href="https://doi.org/10.1007/s00406-026-02389-6" target="_blank" rel="noopener noreferrer" aria-label="DOI for The role of social support in transdiagnostic symptom networks in affective and psychotic disorders: A cross-sectional and longitudinal network analysis">https://doi.org/10.1007/s00406-026-02389-6</a></p></div>
+</li>
+<li class="publication">
+  <div class="pub-body"><a class="pub-title" href="https://doi.org/10.1016/j.jad.2026.121779" target="_blank" rel="noopener noreferrer">Formal thought disorder in unipolar depression: Prevalence and functional brain correlates from a multimodal MRI study</a>
+  <p class="pub-authors">Stein, F., Lepper, J., Mülfarth, R. R., Schepers, D., <strong class="me">Seuffert, S.</strong>, Teutenberg, L., Thomas-Odenthal, F., Usemann, P., Borgers, T., Flinkenflügel, K., Goltermann, J., Grotegerd, D., Hubbert, J., Jurischka, C., Krieger, J., Meinert, S., Alexander, N., Hahn, T., Jamalabadi, H., … Kircher, T..</p>
+  <p class="pub-journal"><em>Journal of Affective Disorders, 407, 121779</em> <a href="https://doi.org/10.1016/j.jad.2026.121779" target="_blank" rel="noopener noreferrer" aria-label="DOI for Formal thought disorder in unipolar depression: Prevalence and functional brain correlates from a multimodal MRI study">https://doi.org/10.1016/j.jad.2026.121779</a></p></div>
+</li>
+<li class="publication">
+  <div class="pub-body"><a class="pub-title" href="https://doi.org/10.1192/j.eurpsy.2026.10151" target="_blank" rel="noopener noreferrer">Linking spontaneous speech, cognition, and psychopathology across affective and psychotic disorders: A network approach</a>
+  <p class="pub-authors">Mülfarth, R. R., <strong class="me">Seuffert, S.</strong>, Alexander, N., Jamalabadi, H., Nenadić, I., Straube, B., Teutenberg, L., Thomas-Odenthal, F., Usemann, P., Dannlowski, U., Kircher, T., &amp; Stein, F..</p>
+  <p class="pub-journal"><em>European Psychiatry, 69(1), e21</em> <a href="https://doi.org/10.1192/j.eurpsy.2026.10151" target="_blank" rel="noopener noreferrer" aria-label="DOI for Linking spontaneous speech, cognition, and psychopathology across affective and psychotic disorders: A network approach">https://doi.org/10.1192/j.eurpsy.2026.10151</a></p></div>
+</li>
+      </ol>
+      <h3 class="year-heading">2025</h3>
+      <ol class="publications">
+<li class="publication">
+  <div class="pub-body"><a class="pub-title" href="https://doi.org/10.1038/s41380-025-03347-9" target="_blank" rel="noopener noreferrer">Linking speech patterns to brain structure in affective and psychotic disorders: An integrative natural language processing approach</a>
+  <p class="pub-authors"><strong class="me">Seuffert, S.</strong>, Mülfarth, R. R., Teutenberg, L., Thomas-Odenthal, F., Usemann, P., Alexander, N., Jamalabadi, H., Nenadić, I., Straube, B., Hahn, T., Dannlowski, U., Kircher, T., &amp; Stein, F..</p>
+  <p class="pub-journal"><em>Molecular Psychiatry. Advance online publication</em> <a href="https://doi.org/10.1038/s41380-025-03347-9" target="_blank" rel="noopener noreferrer" aria-label="DOI for Linking speech patterns to brain structure in affective and psychotic disorders: An integrative natural language processing approach">https://doi.org/10.1038/s41380-025-03347-9</a></p></div>
+</li>
+<li class="publication">
+  <div class="pub-body"><a class="pub-title" href="https://doi.org/10.1016/j.psychres.2025.116772" target="_blank" rel="noopener noreferrer">Figurative language production in schizophrenia, bipolar disorder, and depression</a>
+  <p class="pub-authors">Mueller, N., Mülfarth, R. R., <strong class="me">Seuffert, S.</strong>, Dannlowski, U., Kircher, T., Kauschke, C., Nagels, A., &amp; Stein, F..</p>
+  <p class="pub-journal"><em>Psychiatry Research, 354, 116772</em> <a href="https://doi.org/10.1016/j.psychres.2025.116772" target="_blank" rel="noopener noreferrer" aria-label="DOI for Figurative language production in schizophrenia, bipolar disorder, and depression">https://doi.org/10.1016/j.psychres.2025.116772</a></p></div>
+</li>
+      </ol>
+      <h3 class="year-heading">2024</h3>
+      <ol class="publications">
+<li class="publication">
+  <div class="pub-body"><a class="pub-title" href="https://doi.org/10.1038/s41537-024-00524-7" target="_blank" rel="noopener noreferrer">Approximating the semantic space: Word embedding techniques in psychiatric speech analysis</a>
+  <p class="pub-authors">Palominos, C., He, R., Fröhlich, K., Mülfarth, R. R., <strong class="me">Seuffert, S.</strong>, Sommer, I. E., Homan, P., Kircher, T., Stein, F., &amp; Hinzen, W..</p>
+  <p class="pub-journal"><em>Schizophrenia, 10(1), 114</em> <a href="https://doi.org/10.1038/s41537-024-00524-7" target="_blank" rel="noopener noreferrer" aria-label="DOI for Approximating the semantic space: Word embedding techniques in psychiatric speech analysis">https://doi.org/10.1038/s41537-024-00524-7</a></p></div>
+</li>
+      </ol>
+    </section>
+    <section id="background">
+      <h2>Academic background</h2>
+      <dl class="details">
+        <dt>Current position</dt><dd>PhD Student, Philipps-Universität Marburg (since December 2023)</dd>
+        <dt>Education</dt><dd>M.Sc. Psychology, University of Kassel<br>B.Sc. Psychology, University of Mannheim</dd>
+        <dt>Memberships</dt><dd>Center for Mind, Brain and Behavior (CMBB); German Association for Psychiatry, Psychotherapy and Psychosomatics (DGPPN)</dd>
+      </dl>
+    </section>
+    <section id="technical">
+      <h2>Technical expertise</h2>
+      <div class="research-list">
+        <div class="research-item"><strong>Programming &amp; research computing</strong><span>Python, R, data processing and visualization, reproducible analysis scripts, Git/GitHub, and working with Linux-based HPC environments.</span></div>
+        <div class="research-item"><strong>Speech &amp; language processing</strong><span>Automated transcription workflows, acoustic and prosodic feature extraction, German-language NLP, syntactic and semantic analysis, speech graphs, and transformer-based language models.</span></div>
+        <div class="research-item"><strong>Statistics &amp; machine learning</strong><span>Regression and multivariate analyses, exploratory and confirmatory factor analysis, network analysis, supervised classification, cross-validation, and multimodal feature integration.</span></div>
+        <div class="research-item"><strong>Neuroimaging &amp; data integration</strong><span>Structural and diffusion MRI analyses, MRI data organization and quality control, and linking neuroimaging measures with speech, cognitive, and clinical data.</span></div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact &amp; links</h2>
+      <p><a href="mailto:svenja.seuffert@uni-marburg.de">svenja.seuffert@uni-marburg.de</a><br>Department of Psychiatry and Psychotherapy, Marburg, Germany</p>
+      <div class="links">
+        <a href="https://orcid.org/0009-0007-2230-4741" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+        <a href="https://github.com/svenjaseuffert" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/svenja-seuffert-45782a373/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://neurosta.github.io/NeuroSTA/ss.html" target="_blank" rel="noopener noreferrer">NeuroSTA profile ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer class="container">© 2026 Svenja Seuffert</footer>
 </body>
 </html>
-
-
-
-
